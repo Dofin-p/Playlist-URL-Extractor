@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube再生リスト一括取得</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    input, button, textarea { width: 100%; margin-bottom: 15px; padding: 10px; font-size: 16px; }
+    textarea { height: 300px; }
+    #loading { display: none; color: #ff6a3d; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>再生リスト一括取得ツール</h2>
+  <p>YouTubeの再生リストURLを入力してください。</p>
+
+  <input type="text" id="playlistUrl" placeholder="例: https://youtube.com/playlist?list=PLb02MaZXm5_PfO9XWzSf5tEbqC1k53eE8&si=vMBgtq2V0Vk3HfXu">
+  <button id="fetchBtn">動画URLを一括取得する</button>
+
+  <p id="loading">APIと通信してデータを取得中...（数秒かかります）</p>
+
+  <textarea id="resultArea" placeholder="ここに結果が表示されます..." readonly></textarea>
+  <button id="selectAllBtn">一括コピーボタン</button>
+
+<script src="./app.js"></Script>
+</body>
+</html>
